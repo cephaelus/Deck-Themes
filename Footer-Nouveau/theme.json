@@ -1,0 +1,55 @@
+{
+    "name": "Footer Nouveau",
+    "author": "ceph",
+    "version": "v1.0",
+    "description": "Footer themes and options for SteamOS >3.5",
+    "target": "System-Wide",
+    "manifest_version": 9,
+    "inject": {
+        "shared.css": ["bigpicture"]
+    },
+    "patches": {
+        "Theme": {
+            "default": "Default",
+            "type": "dropdown",
+            "values": {
+                "Default": {},
+                "Solid Black": {
+                    "themes/black.css": ["bigpicture"]
+                },
+                "Gradient": {
+                    "themes/gradient.css": ["bigpicture"]
+                },
+                "Transparent": {
+                    "themes/transparent.css": ["bigpicture"]
+                }
+            }
+        },
+        "Top Border": {
+            "default": "Yes",
+            "type": "checkbox",
+            "values": {
+                "No": {"options/hide-border.css": ["bigpicture"]},
+                "Yes": {}
+            }
+        },
+        "Wide Letter Spacing": {
+            "default": "No",
+            "type": "checkbox",
+            "values": {
+                "No": {},
+                "Yes": {"options/wide-tracking.css": ["bigpicture"]}
+            }
+        },
+        "Margin Between Labels (px)": {
+            "default": "16",
+            "type": "slider",
+            "values": {
+                "16": {},
+                "20": {"options/margin/20px.css": ["bigpicture"]},
+                "24": {"options/margin/24px.css": ["bigpicture"]},
+                "28": {"options/margin/28px.css": ["bigpicture"]}
+            }
+        }
+    }
+}
